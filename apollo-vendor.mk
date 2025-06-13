@@ -6,6 +6,10 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/apollo
 
 PRODUCT_COPY_FILES += \
+    vendor/xiaomi/apollo/proprietary/odm/etc/dolby/multimedia_dolby_dax_default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/multimedia_dolby_dax_default.xml \
+    vendor/xiaomi/apollo/proprietary/odm/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
+    vendor/xiaomi/apollo/proprietary/odm/etc/init/vendor.dolby_sp.hardware.dmssp@2.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.dolby_sp.hardware.dmssp@2.0-service.rc \
+    vendor/xiaomi/apollo/proprietary/odm/etc/init/vendor.dolby_v3_6.hardware.dms360@2.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.dolby_v3_6.hardware.dms360@2.0-service.rc \
     vendor/xiaomi/apollo/proprietary/system/etc/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     vendor/xiaomi/apollo/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/xiaomi/apollo/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
@@ -1019,6 +1023,27 @@ PRODUCT_PACKAGES += \
     vendor.qti.diaghal@1.0 \
     vendor.qti.hardware.wifidisplaysession@1.0 \
     vendor.qti.imsrtpservice@3.0 \
+    libdapparamstorage_v3_6 \
+    libdeccfg_v3_6 \
+    libdlbdsservice_v3_6 \
+    vendor.dolby_v3_6.hardware.dms360@2.0 \
+    libstagefright_soft_ddpdec \
+    libhwdap_v3_6 \
+    libswdap_v3_6 \
+    libcodec2_hidl@1.0_sp \
+    libcodec2_hidl_plugin_sp \
+    libcodec2_soft_ac4dec_sp \
+    libcodec2_soft_common_sp \
+    libcodec2_soft_ddpdec_sp \
+    libcodec2_store_dolby_sp \
+    libcodec2_vndk_sp \
+    libdapparamstorage_sp \
+    libdeccfg_sp \
+    libdlbdsservice_sp \
+    libui_sp \
+    vendor.dolby_sp.hardware.dmssp@2.0-impl \
+    vendor.dolby_sp.hardware.dmssp@2.0 \
+    vendor.dolby_v3_6.hardware.dms360@2.0-impl \
     CACertService \
     CneApp \
     IWlanService \
@@ -1043,6 +1068,8 @@ PRODUCT_PACKAGES += \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
     manifest_vendor.xiaomi.hardware.mlipay.xml \
     vendor.qti.gnss@4.0-service.xml \
+    manifest_dax_dolby_v3_6.xml \
+    vendor.dolby.hardware.dms.xml \
     ATFWD-daemon \
     adpl \
     adsprpcd \
@@ -1117,7 +1144,10 @@ PRODUCT_PACKAGES += \
     xtwifi-client \
     xtwifi-inet-agent \
     dpmd \
-    wfdservice64
+    wfdservice64 \
+    vendor.dolby_sp.hardware.dmssp@2.0-service \
+    vendor.dolby_sp.media.c2@1.0-service \
+    vendor.dolby_v3_6.hardware.dms360@2.0-service
 
 PRODUCT_PACKAGES += \
     vendor_lib_libEGL_adreno_so \
